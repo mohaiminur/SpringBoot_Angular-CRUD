@@ -1,0 +1,44 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Edit Employee</h3>
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="employee.name" name="name">
+    
+        </div>
+        <div class="form-group">
+            <label>Gender</label><br>
+        <label class="radio-inline">
+            <input type="radio" id="Male" [(ngModel)]="employee.gender" name="gender"value="Male"> Male
+          </label>
+          <label class="radio-inline"style="margin-left:20px">
+            <input type="radio" id="Female" [(ngModel)]="employee.gender" name="gender"value="Female"> Female
+          </label>
+        </div>
+    
+        <div class="form-group">
+            <label>Department</label>
+            <select class="form-control" id="department" [(ngModel)]="employee.department" name="department">
+                <option>accounts</option>
+                <option>development</option>
+                <option>hr</option>
+                <option>marketing</option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <select class="form-control" id="city" [(ngModel)]="employee.city" name="city">
+                <option>Dhaka</option>
+                <option>Bogra</option>
+                <option>Barisal</option>
+                <option>Shylet</option>
+              </select>
+        </div>
+        <div>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+        
+    </form>
+    </div>
+    
